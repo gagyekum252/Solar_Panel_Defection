@@ -44,7 +44,7 @@ with st.spinner("Loading model..."):
         for uploaded_file in uploaded_files:
         # Open the uploaded image
             image = Image.open(uploaded_file).convert("RGB")
-            st.image(image, caption="Uploaded Image", use_column_width=True)
+            st.image(image, caption="Uploaded Image", use_container_width=True)
 
         # Preprocess the image for prediction
             img = image.resize((224, 224))
