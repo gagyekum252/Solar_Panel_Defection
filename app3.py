@@ -62,6 +62,7 @@ with st.spinner("Loading model..."):
             predicted_class = CLASSES[predicted_index]
             # Append report metrics
             results_summary.append({ "filename": uploaded_file.name,"predicted_class": predicted_class,"confidence_score": float(confidence_score)})
+            st.dataframe(pd.DataFrame(results_summary))
 
 
             st.markdown(f"### Predicted Class: **{predicted_class}** ***Confidence Score: {confidence_score:.1%}**")
