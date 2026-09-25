@@ -26,7 +26,7 @@ CLASSES =["Bird-drop", "Clean", "Dusty", "Electrical-damage", "Physical-damage",
 # Load the trained model
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("trained_effenet_finetune1.keras")
+    model = tf.keras.models.load_model("trained_effenet_finetune.keras")
     return model
 
 with st.spinner("Loading model..."):
